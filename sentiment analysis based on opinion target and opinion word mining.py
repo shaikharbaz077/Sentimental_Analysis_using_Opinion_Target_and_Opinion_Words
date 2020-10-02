@@ -11,6 +11,7 @@ import re
 
 
 def decontracted(phrase):
+    print('Data preprocessing')
     # specific
     phrase = re.sub(r"won't", "will not", phrase)
     phrase = re.sub(r"can\'t", "can not", phrase)
@@ -23,8 +24,6 @@ def decontracted(phrase):
     phrase = re.sub(r"\'ll", " will", phrase)
     phrase = re.sub(r"\'t", " not", phrase)
     phrase = re.sub(r"\'ve", " have", phrase)
-    phrase = re.sub(r"\'m", " am", phrase)
-    phrase = re.sub(r" v", " very", phrase)
     return phrase
 
 reviewerID =[]
